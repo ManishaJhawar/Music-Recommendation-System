@@ -1,0 +1,42 @@
+<?php
+	if(isset( $_POST['submit_form']))
+	{
+ 		function validate_data($data)
+ 		{
+ 	 		$data = trim($data);
+  			$data = stripslashes($data);
+  			$data = strip_tags($data);
+  			$data = htmlspecialchars($data);
+  			/*$data = mysqli_real_escape_string($data);*/
+  			return $data;    
+ 		}
+
+ 		$uname = validate_data( $_POST['form-username'] );
+ 		$emailid = validate_data( $_POST['form-email'] );
+ 		$password = validate_data( $_POST['form-cpassword'] );
+ 		$regid=rand(1,100000);
+
+ 		$host = 'localhost';
+ 		$user = 'root';
+ 		$pass = '';
+ 		
+ 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		if(mysqli_connect_errno())
+ 		{
+			echo "Error while connecting ".mysqli_connect_error()."<br/>";
+		}
+
+ 		$que="INSERT INTO Customer VALUES ('$regid','$uname','$emailid','$password')";
+ 
+ 		if(mysqli_query($con,$que))
+ 		{
+			echo "You have successfully registered. Thankyou.<br/><br />Your registration id : ".$regid."  (Please keep a note of it)<br /><br /><a href='http://localhost/OurProject/evento-free-music-event-template/index.html'>Vist the website</a>";
+		}	
+
+		else
+		{
+			echo "Error while populating into database<br/>".mysqli_error($con)."<br/>";
+		}
+ 		mysqli_close($con);
+	}
+?>
