@@ -1,8 +1,36 @@
 <?php
-//session_start();
 
+//header('Content-Type: application/json' );
 	if(isset( $_POST['viewPlaylistButton']))
 	{
+		echo "<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+    	<link rel='stylesheet' type='text/css' href='viewCatalogue.css'>
+      	<meta charset='UTF-8'>
+      	<title>database connections</title>
+      	
+      	<style>
+      		html { 
+  background: url(Cream.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+      	</style>
+
+	<!-- Load c3.css -->
+	<link href='c3.css' rel='stylesheet' type='text/css'>
+	
+	<!-- Load d3.js and c3.js -->
+	<script src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
+	<script src='c3.min.js'></script>
+
+    </head>
+    
+    <body>";
  		function validate_data($data)
  		{
  	 		$data = trim($data);
@@ -13,20 +41,8 @@
   			return $data;    
  		}
 
- 		$regid = validate_data( $_POST['playlistregid'] );
- 		
- 		echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
- 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
-	<head>
-    	<link rel='stylesheet' type='text/css' href='viewCatalogue.css'>
-      	<meta charset='UTF-8'>
-      	<title>database connections</title>
-      	
-    </head>
-    
-    <body>";
+		$regid = validate_data( $_POST['playlistregid'] );
+		//$searchQuery = validate_data( $_POST['searchQuery'] );		
 
  		$host = 'localhost';
  		$user = 'root';
@@ -87,33 +103,28 @@
             		$hiphop = $hiphop + 1;
             	}
     		}
+    		$data = array();
+    		array_push($data,$rock);
+    		array_push($data,$pop);
+    		array_push($data,$jazz);
+    		array_push($data,$funk);
+    		array_push($data,$hiphop);
   			// Free result set
   			mysqli_free_result($result);
 		}
- 		mysqli_close($con);
- 		
- 		/*echo "rock = ".$rock;
- 		echo "pop = ".$pop;
- 		echo "jazz = ".$jazz;
- 		echo "funk = ".$funk;
- 		echo "hiphop = ".$hiphop;*/
- 		
- 		$data=array();
-		array_push($data, $rock);
-		array_push($data, $pop);
-		array_push($data, $jazz);
-		array_push($data, $funk);
-		array_push($data, $hiphop);
 		
-
-	$visualize=json_encode($data);
- 		
+		$visualize = json_encode($data);
+ 		mysqli_close($con);
  		echo "</table>
     </div>
+    </body>
+    </html>
     ";
-	}
+	}	
 ?>
 
+<html>
+<body>
 <br/><br/><br/>
 <b>Performance Graph</b>
 <br/><br/>
@@ -123,7 +134,7 @@
 	var data = '<?= $visualize; ?>';
 	var fdata = JSON.parse(data);
 	
-	window.alert(fdata);
+	//window.alert(fdata);
 
 	var dt=[];
 
@@ -133,15 +144,35 @@
 		dt.push(fdata[3]);
 		dt.push(fdata[4]);
 
-  window.alert(dt);
-
 	 </script>	
 	<script type='text/javascript' src='playlistGraph.js'> </script>
-<?php 
-echo "Hello";
-print ($visualize);?>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

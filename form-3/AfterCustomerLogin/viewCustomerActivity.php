@@ -1,9 +1,6 @@
 <?php
 
-//header('Content-Type: application/json' );
-	if(isset( $_POST['viewPlaylistButton']))
-	{
-		echo "<!DOCTYPE html>
+echo "<!DOCTYPE html>
 
 <html lang='en'>
     <head>
@@ -40,9 +37,7 @@
   			/*$data = mysqli_real_escape_string($data);*/
   			return $data;    
  		}
-
-		$regid = validate_data( $_POST['playlistregid'] );
-		//$searchQuery = validate_data( $_POST['searchQuery'] );		
+		
 
  		$host = 'localhost';
  		$user = 'root';
@@ -55,21 +50,13 @@
 		}
 
 		//Check if the song id is valid
-		$query="SELECT SongName,genre FROM Playlist WHERE C_ID =".$regid;
+		$query="SELECT genre FROM Playlist";
 		$rock = 0;
 		$pop = 0;
 		$jazz = 0;
 		$funk = 0;
 		$hiphop = 0;
 		
-		
-		echo "
-		<div style='overflow-x:auto;'>
-      <table>
-        <tr>
-          <th>Song Name</th>
-          <th>Genre</th>
-        </tr>";
         
         if ($result=mysqli_query($con,$query))
   		{
@@ -77,24 +64,19 @@
   			while ($row=mysqli_fetch_row($result))
     		{
     		
-    			echo
-            			"<tr>
-              			<td>".$row[0]."</td>
-              			<td>".$row[1]."</td>
-            			</tr>\n";
-            	if ($row[1]=="Rock")
+            	if ($row[0]=="Rock")
             	{
             		$rock = $rock + 1;
             	}
-            	elseif ($row[1]=="Pop")
+            	elseif ($row[0]=="Pop")
             	{
             		$pop = $pop + 1;
             	}
-            	elseif ($row[1]=="Jazz")
+            	elseif ($row[0]=="Jazz")
             	{
             		$jazz = $jazz + 1;
             	}
-            	elseif ($row[1]=="Funk")
+            	elseif ($row[0]=="Funk")
             	{
             		$funk = $funk + 1;
             	}
@@ -115,12 +97,10 @@
 		
 		$visualize = json_encode($data);
  		mysqli_close($con);
- 		echo "</table>
-    </div>
+ 		echo "
     </body>
     </html>
-    ";
-	}	
+    ";	
 ?>
 
 <html>
@@ -134,7 +114,6 @@
 	var data = '<?= $visualize; ?>';
 	var fdata = JSON.parse(data);
 	
-	//window.alert(fdata);
 
 	var dt=[];
 
@@ -144,38 +123,9 @@
 		dt.push(fdata[3]);
 		dt.push(fdata[4]);
 
-  window.alert(dt);
 
 	 </script>	
 	<script type='text/javascript' src='playlistGraph.js'> </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

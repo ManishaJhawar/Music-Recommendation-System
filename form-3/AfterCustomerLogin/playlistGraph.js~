@@ -1,20 +1,24 @@
 function createGraph(dt){
 
-window.alert(dt);
+window.alert("ab");
+//window.alert(dt);
 
-var NoOfSongs = ['Number1'];
+var NoOfSongs = ['NumberOfSongs'];
 var Genre = [];
 
 for (var i=0; i < dt.length; i++)
 	{
-	Genre.push(dt[i]);
+	NoOfSongs.push(dt[i]);
 	}
+
+window.alert("NoOfSongs");
+window.alert(NoOfSongs);
 
 var chart = c3.generate({ 
 	bindto: '#chart',
 	data: { 
 		columns: [ 
-			Genre 
+			NoOfSongs 
 		] 
 	}, 
 	axis: { 
@@ -26,4 +30,5 @@ var chart = c3.generate({
 }); 
 }
 
+window.alert("hello");
 createGraph(dt);

@@ -1,18 +1,12 @@
 function createGraph(dt){
 
-window.alert("ab");
-window.alert(dt);
-
-var NoOfSongs = [];
+var NoOfSongs = ['NumberOfSongs'];
 var Genre = [];
 
 for (var i=0; i < dt.length; i++)
 	{
 	NoOfSongs.push(dt[i]);
 	}
-
-window.alert("NoOfSongs");
-window.alert(NoOfSongs);
 
 var chart = c3.generate({ 
 	bindto: '#chart',

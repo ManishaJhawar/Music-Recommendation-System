@@ -122,8 +122,6 @@ if(isset($_GET['adminid'])){
 									</div>	
 									<div>
 										<a href='viewQueries.php' class="btn btn-primary">Answer back the queries<i class="fa fa-angle-right"></i></a>
-									</div>
-									<div>
 										<a href='viewCustomerActivity.php' class="btn btn-primary">View customer activities<i class="fa fa-angle-right"></i></a>
 									</div>
 								</div>

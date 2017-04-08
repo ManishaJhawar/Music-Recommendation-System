@@ -214,7 +214,7 @@
 			<br />
 			<br />
 			<div>
-				<a href="/Music-Recommendation-System/form-3/AfterCustomerLogin/viewCustomerActivity.php" class="btn btn-primary">View the trending songs!<i class="fa fa-angle-right"></i></a><!--To put link in href-->
+				<a href="table2.php" class="btn btn-primary">View the entire MUSIC CATALOGUE<i class="fa fa-angle-right"></i></a><!--To put link in href-->
 			</div>			
 		</div>
 	</section><!--/#event-->
