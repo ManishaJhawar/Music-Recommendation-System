@@ -185,6 +185,7 @@ if(isset($_GET['regid'])){
 			</div>
 			<div>
 				<a href="viewCatalogue.php?regid=<?php echo $regid;?>" class="btn btn-primary">View the entire MUSIC CATALOGUE<i class="fa fa-angle-right"></i></a>
+				<a href="uploadFiles.html" class="btn btn-primary">Upload cover songs ></h3></a>
 			</div>			
 		</div>
 	</section><!--/#event-->

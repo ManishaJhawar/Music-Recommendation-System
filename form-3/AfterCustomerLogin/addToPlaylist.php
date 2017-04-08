@@ -49,7 +49,7 @@
 		}
 
 		//Check if the song id is valid
-		$query="SELECT Song_Name FROM Song WHERE Song_id = '".$songid."'";
+		$query="SELECT Song_Name,genre FROM Song WHERE Song_id = '".$songid."'";
 		if($result=mysqli_query($con,$query))
  		{
  			$row=mysqli_fetch_row($result);
@@ -61,7 +61,7 @@
  			else
  			{
 
- 		$que="INSERT INTO Playlist VALUES ('$regid','$playlistid','$row[0]')";
+ 		$que="INSERT INTO Playlist VALUES ('$regid','$playlistid','$row[0]','$row[1]')";
  
  		if(mysqli_query($con,$que))
  		{

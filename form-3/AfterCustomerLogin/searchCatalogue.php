@@ -1,5 +1,5 @@
 <?php
-	if(isset( $_POST['submit_searchCatalogue']))
+	if(isset( $_GET['submit_searchCatalogue']))
 	{
 		echo "<!DOCTYPE html>
 
@@ -21,7 +21,7 @@
   			return $data;    
  		}
 
- 		$searchQuery = validate_data( $_POST['searchQuery'] );
+ 		$searchQuery = validate_data( $_GET['searchQuery'] );
  		$host = 'localhost';
  		$user = 'root';
  		$pass = '';
@@ -40,7 +40,7 @@
         <tr>
           <th>Song_ID</th>
           <th>SongName</th>
-          <th>Duration</th>
+          <th>Duration (min)</th>
         </tr>";
         
  		
@@ -52,7 +52,7 @@
             			"<tr>
               			<td>".$row[0]."</td>
               			<td>".$row[1]."</td>
-              			<td>".$row[2]."</td>
+              			<td>".(round($row[2]/60))."</td>
             			</tr>\n";
             	}
             	mysqli_free_result($result);

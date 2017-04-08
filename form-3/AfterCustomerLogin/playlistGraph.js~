@@ -1,0 +1,29 @@
+function createGraph(dt){
+
+window.alert(dt);
+
+var NoOfSongs = ['Number1'];
+var Genre = [];
+
+for (var i=0; i < dt.length; i++)
+	{
+	Genre.push(dt[i]);
+	}
+
+var chart = c3.generate({ 
+	bindto: '#chart',
+	data: { 
+		columns: [ 
+			Genre 
+		] 
+	}, 
+	axis: { 
+	x: { 
+		type: 'category', 
+		categories: ['Rock','Pop','Jazz','Funk','Hiphop'] 
+	} 
+	} 
+}); 
+}
+
+createGraph(dt);

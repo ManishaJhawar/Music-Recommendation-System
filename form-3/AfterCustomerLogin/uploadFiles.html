@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<style>
+
+      	html { 
+  background: url(musiclife.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+</style>
+<head>
+<html>
+<body>
+<center>
+<h1><strong> FILE UPLOADING </strong></h1>
+<hr>
+<!--<form action="uploadFiles.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file" />
+<br />
+<input type="submit" name="submit" value="Submit" />
+</form>-->
+<form method="post" enctype="multipart/form-data" action="uploadFiles.php">
+<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+<tr>
+<td width="246">
+<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+<input name="userfile" type="file" id="userfile">
+</td>
+<td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>

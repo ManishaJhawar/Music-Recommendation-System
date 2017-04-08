@@ -30,6 +30,6 @@ if(isset($_GET['regid'])){
    <input type="submit" value="Get song recommendation" class="tfbutton2" name="submitRatingButton"/>
 	</form>-->
 	<strong><h4>You have rated this song.<br /> Thankyou.<br /> You could go back and rate more songs or click on the below link to get song recommendations.<br/><br /></strong>
-	<a href="/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/getRecommendation.php?regid=<?php echo $regid;?>" class="btn btn-primary">Get recommendation<i class="fa fa-angle-right"></i></a>
+	<a href="./getRecommendation.php?regid=<?php echo $regid;?>" class="btn btn-primary">Get recommendation<i class="fa fa-angle-right"></i></a>
 </body>
 </html>

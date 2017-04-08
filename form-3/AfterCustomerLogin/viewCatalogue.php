@@ -14,9 +14,45 @@ echo "<!DOCTYPE html>
       	<meta charset='UTF-8'>
       	<title>database connections</title>
       	
+      	<!-- CSS Styles -->
+		<style>
+			.speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+  			.speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+  			.speech img {float: right; width: 40px }
+		</style>
+      	
       	<script type='text/javascript' src='validateRatingForm.js'></script>
       	<script type='text/javascript' src='validatePlaylist.js'></script>
       	<script type='text/javascript' src='validateViewPlaylist.js'></script>
+      	
+      	<!-- HTML5 Speech Recognition API -->
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = 'en-US';
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
       	
     </head>
     
@@ -37,12 +73,20 @@ echo "<!DOCTYPE html>
       echo "
       
       <div id='tfheader'>
-		<form id='tfnewsearch' method='POST' action='searchCatalogue.php'>
-		        <input type='text' id='tfq' class='tftextinput2' name='searchQuery' size='21' maxlength='120' placeholder='Search songs here by name'>
+		<form id='tfnewsearch' method='get' action='searchCatalogue.php'>
+		<div class='speech'>
+		        
+		        <input type='text' name='searchQuery' id='transcript' placeholder='Search / Speak' />
+		        <img onclick='startDictation()' src='voiceSearch.png' />
 		        <input type='submit' value='>' class='tfbutton2' name='submit_searchCatalogue'/>
+		        
+    			
+ 		 </div>
 		</form>
 		<div class='tfclear'></div>
 	</div><br />
+	
+	
 	
 	<!--<form>
   <label for='fname'>First Name</label>
@@ -81,12 +125,62 @@ echo "<!DOCTYPE html>
    </div>
    </form>
    
+   <h2 class='tip'><strong><center>SONG GENRES</center></strong></h2>
+   <form role = 'form' action='viewRock.php' method='post' class='login-form' onsubmit='return validate2();' id='form3'>
+   <div class = 'form-group'>
+
+      <center><input type='submit' value='Rock  >>' class='tfbutton7' name='viewRockSong'/></center><br />
+      <strong><p id='error_para2' class='tip'></p></strong>
+   </div>
+   </form>
+   <form role = 'form' action='viewHipHop.php' method='post' class='login-form' onsubmit='return validate2();' id='form3'>
+   <div class = 'form-group'>
+
+      
+      <center><input type='submit' value='Hip-Hop >>' class='tfbutton7' name='viewHipHopSong'/></center><br />
+      
+      
+      <strong><p id='error_para2' class='tip'></p></strong>
+   </div>
+   </form>
+   
+   
+   <form role = 'form' action='viewFunk.php' method='post' class='login-form' onsubmit='return validate2();' id='form3'>
+   <div class = 'form-group'>
+
+      
+      <center><input type='submit' value='Funk>>' class='tfbutton7' name='viewFunkSong'/></center><br />
+     
+      
+      <strong><p id='error_para2' class='tip'></p></strong>
+   </div>
+   </form>
+   
+   <form role = 'form' action='viewPop.php' method='post' class='login-form' onsubmit='return validate2();' id='form3'>
+   <div class = 'form-group'>
+
+      
+      <center><input type='submit' value='Pop  >>' class='tfbutton7' name='viewPopSong'/></center><br />
+      
+      <strong><p id='error_para2' class='tip'></p></strong>
+   </div>
+   </form>
+   <form role = 'form' action='viewJazz.php' method='post' class='login-form' onsubmit='return validate2();' id='form3'>
+   <div class = 'form-group'>
+
+      
+      <center><input type='submit' value='Jazz  >>' class='tfbutton7' name='viewJazzSong'/></center><br />
+      
+      <strong><p id='error_para2' class='tip'></p></strong>
+   </div>
+   </form>
+   
       <div style='overflow-x:auto;'>
       <table>
         <tr>
           <th>Song_ID</th>
           <th>SongName</th>
-          <th>Duration (s)</th>
+          <th>Duration (min)</th>
         </tr>";
         
         
@@ -98,7 +192,7 @@ echo "<!DOCTYPE html>
             			"<tr>
               			<td>".$row[0]."</td>
               			<td>".$row[1]."</td>
-              			<td>".$row[2]."</td>
+              			<td>".(round($row[2]/60))."</td>
             			</tr>\n";
             	}
             	mysqli_free_result($result);
