@@ -15,7 +15,7 @@ if(isset($_GET['regid'])){
       	<title>Get recommendations</title>
       	<style>
       	html { 
-  background: url(headphones.png) no-repeat center center fixed; 
+  background: url(headphones.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

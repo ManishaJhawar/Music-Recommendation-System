@@ -65,18 +65,18 @@
  
  		if(mysqli_query($con,$que))
  		{
-			echo "Added to playlist.<br /><br />You could go back and add other songs too to the playlist.";
+			echo "<strong>Added to playlist.<br /><br />You could go back and add other songs too to the playlist.</strong>";
 		}	
 
 		else
 		{
-			echo "You have already added this song to the playlist.<br/>Go back and add some other song.";
+			echo "<strong>You have already added this song to the playlist.<br/>Go back and add some other song.</strong>";
 		}
 		}
 		}
 		else
 		{
-			echo "You have entered a wrong song id.<br /><br />Please go back and enter a correct one.";
+			echo "<strong>You have entered a wrong song id.<br /><br />Please go back and enter a correct one.</strong>";
 		}
  		mysqli_close($con);
  		echo "

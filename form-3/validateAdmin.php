@@ -20,7 +20,7 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
@@ -36,13 +36,13 @@
     		if ($row[0]==$password)
     		{
     			//echo "Enetered if";
-    			header("Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/AdminPage.php?adminname=".urlencode($row[1])."& adminid=".urlencode($adminid));
-    			//header ("Location : http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/AdminPage.php?adminname=".urlencode($row[1])."& adminid=".urlencode($adminid));
+    			header("Location: /Music-Recommendation-System/form-3/AfterCustomerLogin/AdminPage.php?adminname=".urlencode($row[1])."& adminid=".urlencode($adminid));
+    			//header ("Location : /Music-Recommendation-System/form-3/AfterCustomerLogin/AdminPage.php?adminname=".urlencode($row[1])."& adminid=".urlencode($adminid));
     		}
     		else
     		{
     			echo "Invalid admind ID or password<br /><br />Please re-enter valid details";
-    			header("Refresh:2; url=http://localhost/OurProject/evento-free-music-event-template/form-3/adminlogin.html#",true,303);
+    			header("Refresh:2; url=/Music-Recommendation-System/form-3/adminlogin.html#",true,303);
     		}
   			// Free result set
   			mysqli_free_result($result);
@@ -50,7 +50,7 @@
 		else
 		{
 			echo "Invalid admin ID<br /><br />Please re-enter valid details";
-			header("Refresh:2; url=http://localhost/OurProject/evento-free-music-event-template/form-3/adminlogin.html#",true,303);
+			header("Refresh:2; url=/Music-Recommendation-System/form-3/adminlogin.html#",true,303);
 		}
 
  		mysqli_close($con);

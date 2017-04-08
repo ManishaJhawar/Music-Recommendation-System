@@ -22,21 +22,21 @@ if(isset($_GET['regid'])){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>MusiGlobe</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">	
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../css/main.css" rel="stylesheet">
+	<link href="../../css/animate.css" rel="stylesheet">	
+	<link href="../../css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../../images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -56,7 +56,7 @@ if(isset($_GET['regid'])){
 		                    <span class="icon-bar"></span>
 		                </button>
 		                <a class="navbar-brand" href="index.html">
-		                	<!--<img class="img-responsive" src="images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
+		                	<!--<img class="img-responsive" src="../../images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
 		                	<h1 style="text-indent:95px; color:white; font-weight: bold;">MusiGlobe</h1>
 		                	<!--<h3 style="text-indent:95px; color:white; font-weight: bold;">Welcome </h3>-->
 		                </a>                    
@@ -67,7 +67,7 @@ if(isset($_GET['regid'])){
 		                    <li class="scroll"><a href="#explore">Explore</a></li>                         
 		                    <li class="scroll"><a href="#about">About</a></li>                  
 		                    <li class="no-scroll"><a href="#contact">Contact</a></li> 
-		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout</a></li>-->
+		                    <!--<li class="no-scroll"><a href="/Music-Recommendation-System/index.html#">Logout</a></li>-->
 		                    <li class="no-scroll"><a href="logout.php#">Logout</a></li>
 		                </ul>
 		            </div>
@@ -86,7 +86,7 @@ if(isset($_GET['regid'])){
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">					
+					<img class="img-responsive" src="../../images/slider/bg1.jpg" alt="slider">					
 					<div class="carousel-caption">
 						<h1>Welcome  <?php echo $username;?></h1>
 						<h2>Enjoy MusiGlobe </h2>
@@ -95,7 +95,7 @@ if(isset($_GET['regid'])){
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">	
+					<img class="img-responsive" src="../../images/slider/bg2.jpg" alt="slider">	
 					<div class="carousel-caption">
 						<h1>Welcome  <?php echo $username;?></h1>
 						<h2>Enjoy MusiGlobe </h2>
@@ -104,7 +104,7 @@ if(isset($_GET['regid'])){
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">	
+					<img class="img-responsive" src="../../images/slider/bg3.jpg" alt="slider">	
 					<div class="carousel-caption">
 						<h1>Welcome  <?php echo $username;?></h1>
 						<h2>Enjoy MusiGlobe </h2>
@@ -130,21 +130,21 @@ if(isset($_GET['regid'])){
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/Degrees-of-Freedom-Pic.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/Degrees-of-Freedom-Pic.jpg" alt="event-image">
 											<h4>Degrees Of Freedom</h4>
 											<h5>By a Music Band</h5>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/guardianAngel.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/guardianAngel.jpg" alt="event-image">
 											<h4>Your Guardian Angel</h4>
 											<h5>By The Red Jumpsuit Apparatus</h5>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/RockSong.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/RockSong.jpg" alt="event-image">
 											<h4>The Rock Song</h4>
 											<h5>By The Rock Group</h5>
 										</div>
@@ -155,21 +155,21 @@ if(isset($_GET['regid'])){
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/doremi.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/doremi.jpg" alt="event-image">
 											<h4>Do Re Mi</h4>
 											<h5>By Julie Andrews</h5>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/iDontKnowYouPeople.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/iDontKnowYouPeople.jpg" alt="event-image">
 											<h4>I Don't Know You People</h4>
 											<h5>By Orbital</h5>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-event">
-											<img class="img-responsive" src="images/event/onTheRoadAgain.jpg" alt="event-image">
+											<img class="img-responsive" src="../../images/event/onTheRoadAgain.jpg" alt="event-image">
 											<h4>On The Road Again</h4>
 											<h5>By Willlie Nelson</h5>
 										</div>
@@ -180,7 +180,7 @@ if(isset($_GET['regid'])){
 					</div>
 				</div>
 				<div class="guitar">
-					<img class="img-responsive" src="images/guitar.png" alt="guitar">
+					<img class="img-responsive" src="../../images/guitar.png" alt="guitar">
 				</div>
 			</div>
 			<div>
@@ -191,7 +191,7 @@ if(isset($_GET['regid'])){
 
 	<section id="about">
 		<div class="guitar2">				
-			<img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
+			<img class="img-responsive" src="../../images/guitar2.jpg" alt="guitar">
 		</div>
 		<div class="about-content">					
 					<h2><strong>About  MUSIGLOBE</strong></h2>
@@ -211,7 +211,7 @@ if(isset($_GET['regid'])){
 		</div><!--/#map-->
 		<div class="contact-section">
 			<div class="ear-piece">
-				<img class="img-responsive" src="images/ear-piece.png" alt="">
+				<img class="img-responsive" src="../../images/ear-piece.png" alt="">
 			</div>
 			<div class="container">
 				<div class="row">
@@ -236,7 +236,7 @@ if(isset($_GET['regid'])){
 					</div>
 					<div class="col-sm-5">
 						<div>
-							<a href="Template-FAQ/faqs.html" class="btn btn-primary">FAQs<i class="fa fa-angle-right"></i></a>
+							<a href="/Music-Recommendation-System/Template-FAQ/faqs.html" class="btn btn-primary">FAQs<i class="fa fa-angle-right"></i></a>
 						</div><br />
 						<!--<div id="contact-section">
 							<strong><h2>Query Portal</h3></strong>
@@ -282,7 +282,7 @@ if(isset($_GET['regid'])){
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2016 MusiGlobe. All Rights Reserved.</p>                
+                <p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>                
             </div>
         </div>
     </footer>

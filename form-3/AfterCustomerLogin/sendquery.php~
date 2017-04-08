@@ -32,7 +32,7 @@
     <body>";
 
  		$regid = validate_data( $_POST['regid'] );
- 		$query = $_POST['message'];
+ 		$query = validate_data($_POST['message'] );
  		$queryid=rand(1,100000);
  		
  		//echo "admin id =".$adminid;

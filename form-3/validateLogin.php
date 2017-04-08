@@ -20,7 +20,7 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
@@ -34,17 +34,17 @@
   			$row=mysqli_fetch_row($result);
     		if ($row[0]==$password)
     		{
-    			/*header('Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/CustomerPage.html');
-    			echo "You have successfully logged in.<br /><br /><a href='http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/CustomerPage.html'>Vist the website</a>";
+    			/*header('Location: /Music-Recommendation-System/form-3/AfterCustomerLogin/CustomerPage.html');
+    			echo "You have successfully logged in.<br /><br /><a href='/Music-Recommendation-System/form-3/AfterCustomerLogin/CustomerPage.html'>Vist the website</a>";
     			echo "row[0] = ".$row[0];*/
     			
     			//$_SESSION['user'] = $regid;
-                header("Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/CustomerPage.php?username=".urlencode($row[1])."&regid=".urlencode($regid));
+                header("Location: /Music-Recommendation-System/form-3/AfterCustomerLogin/CustomerPage.php?username=".urlencode($row[1])."&regid=".urlencode($regid));
     		}
     		else
     		{
     			echo "Invalid password.<br /><br />Please login again with valid details";
-    			header( "Refresh:2; url=http://localhost/OurProject/evento-free-music-event-template/form-3/login.html#", true, 303);
+    			header( "Refresh:2; url=/Music-Recommendation-System/form-3/login.html#", true, 303);
     		}
   			// Free result set
   			mysqli_free_result($result);
@@ -52,7 +52,7 @@
 		else
 		{
 			echo "Invalid registration ID.<br /><br />Please login again with valid details";
-    		header( "Refresh:2; url=http://localhost/OurProject/evento-free-music-event-template/form-3/login.html#", true, 303);
+    		header( "Refresh:2; url=/Music-Recommendation-System/form-3/login.html#", true, 303);
 		}
 
  		mysqli_close($con);

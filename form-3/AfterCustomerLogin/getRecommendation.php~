@@ -1,6 +1,26 @@
 <?php
 //session_start();
 
+echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+ 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+      	<meta charset='UTF-8'>
+      	<title>database connections</title>
+      	<style>
+      	html { 
+  background: url(headphones.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+      	</style>
+    </head>
+    
+    <body>";
+
 if(isset($_GET['regid'])){
     $regid=$_GET['regid'];
 }else{
@@ -55,5 +75,9 @@ fclose($file);
 $mystring = system('python collaborative_filtering.py '.$regid);
 
 //$result = shell_exec('python collaborative_filtering.py '.$one);
+
+echo "
+    </body>
+</html>";
 
 ?>

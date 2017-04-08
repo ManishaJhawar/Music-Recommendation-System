@@ -41,7 +41,7 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
@@ -69,13 +69,13 @@
 
 		else
 		{
-			echo "You have already rated this song.<br/>Go back and rate some other song.";
+			echo "<strong>You have already rated this song.<br/>Go back and rate some other song.</strong>";
 		}
 		}
 		}
 		else
 		{
-			echo "You have entered a wrong song id.<br /><br />Please go back and enter a correct one.";
+			echo "<strong>You have entered a wrong song id.<br /><br />Please go back and enter a correct one.</strong>";
 		}
  		mysqli_close($con);
  		echo "

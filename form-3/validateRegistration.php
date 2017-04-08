@@ -40,7 +40,7 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
@@ -50,7 +50,7 @@
  
  		if(mysqli_query($con,$que))
  		{
-			echo "You have successfully registered. Thankyou.<br/><br />Your registration id : ".$regid."  (Please keep a note of it)<br /><br /><a href='http://localhost/OurProject/evento-free-music-event-template/index.html'>Vist the website</a>";
+			echo "You have successfully registered. Thankyou.<br/><br />Your registration id : ".$regid."  (Please keep a note of it)<br /><br /><a href='/Music-Recommendation-System/index.html'>Vist the website</a>";
 		}	
 
 		else

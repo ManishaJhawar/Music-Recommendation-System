@@ -41,7 +41,7 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
@@ -64,7 +64,7 @@
  
  		if(mysqli_query($con,$que))
  		{
-			header("Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/successRatingPage.php?regid=".urlencode($regid));
+			header("Location: /Music-Recommendation-System/form-3/AfterCustomerLogin/successRatingPage.php?regid=".urlencode($regid));
 		}	
 
 		else

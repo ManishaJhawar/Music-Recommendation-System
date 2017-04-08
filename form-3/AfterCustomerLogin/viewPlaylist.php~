@@ -42,8 +42,6 @@
 		$query="SELECT SongName FROM Playlist WHERE C_ID =".$regid;
 		
 		echo "
-		<h1>YOUR  PLAYLIST</h1><br />
-		
 		<div style='overflow-x:auto;'>
       <table>
         <tr>

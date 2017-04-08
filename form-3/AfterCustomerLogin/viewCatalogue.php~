@@ -54,7 +54,7 @@ echo "<!DOCTYPE html>
    <form role = 'form' action='getRating.php' method='post' class='login-form' onsubmit='return validate();' id='form1'>
    <div class = 'form-group'>
       <input type = 'text' class = 'form-control' id = 'name' placeholder = 'Enter the song ID here' name='songIDtextbox' />
-      <input type='number' class='form-control' placeholder='Enter your registration ID here' value='".$regid."' name='regid'/>
+      <input type='number' class='form-control' placeholder='Enter your registration ID here' value='".$regid."' name='regid' id='regid'/>
       <input id='ratingValue' type='number' min='1' max='5' step='1' placeholder='Rate this song (1 - 5)' name='ratingValue'/>
       <input type='submit' value='Rate this song now  >>' class='tfbutton7' name='submitRatingButton'/><br />
       <label class='tip'><strong>Tip : Please verify your registration ID before proceeding</strong></label>

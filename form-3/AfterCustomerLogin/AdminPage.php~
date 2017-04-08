@@ -22,21 +22,21 @@ if(isset($_GET['adminid'])){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>MusiGlobe</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">	
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../css/main.css" rel="stylesheet">
+	<link href="../../css/animate.css" rel="stylesheet">	
+	<link href="../../css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-	    <script src="js/html5shiv.js"></script>
-	    <script src="js/respond.min.js"></script>
+	    <script src="../../js/html5shiv.js"></script>
+	    <script src="../../js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../../images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -56,7 +56,7 @@ if(isset($_GET['adminid'])){
 		                    <span class="icon-bar"></span>
 		                </button>
 		                <a class="navbar-brand" href="index.html">
-		                	<!--<img class="img-responsive" src="images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
+		                	<!--<img class="img-responsive" src="../../images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
 		                	<h1 style="text-indent:95px; color:white; font-weight: bold;">MusiGlobe</h1>
 		                	<!--<h3 style="text-indent:95px; color:white; font-weight: bold;">Welcome </h3>-->
 		                </a>                    
@@ -86,19 +86,19 @@ if(isset($_GET['adminid'])){
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">					
+					<img class="img-responsive" src="../../images/slider/bg1.jpg" alt="slider">					
 					<div class="carousel-caption">
 						<h1>Welcome   <?php echo $adminname;?></h1>
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">	
+					<img class="img-responsive" src="../../images/slider/bg2.jpg" alt="slider">	
 					<div class="carousel-caption">
 						<h1>Welcome   <?php echo $adminname;?></h1>
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">	
+					<img class="img-responsive" src="../../images/slider/bg3.jpg" alt="slider">	
 					<div class="carousel-caption">
 						<h1>Welcome   <?php echo $adminname;?></h1>
 					</div>
@@ -118,10 +118,10 @@ if(isset($_GET['adminid'])){
 							<div class="item active">
 								<div class="row">
 									<div>
-										<a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=WTAproject&token=2de46bac2684edaeaf10d3e545e62aad" class="btn btn-primary">Update Database<i class="fa fa-angle-right"></i></a>
+										<a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=Music_System&token=2de46bac2684edaeaf10d3e545e62aad" class="btn btn-primary">Update Database<i class="fa fa-angle-right"></i></a>
 									</div>	
 									<div>
-										<a href="viewQueries.php" class="btn btn-primary">Answer back the queries<i class="fa fa-angle-right"></i></a>
+										<a href='viewQueries.php' class="btn btn-primary">Answer back the queries<i class="fa fa-angle-right"></i></a>
 									</div>
 								</div>
 							</div>					
@@ -129,7 +129,7 @@ if(isset($_GET['adminid'])){
 					</div>
 				</div>
 				<div class="guitar">
-					<img class="img-responsive" src="images/guitar.png" alt="guitar">
+					<img class="img-responsive" src="../../images/guitar.png" alt="guitar">
 				</div>
 			</div>		
 		</div>
@@ -137,7 +137,7 @@ if(isset($_GET['adminid'])){
 
 	<!--<section id="about">
 		<div class="guitar2">				
-			<img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
+			<img class="img-responsive" src="../../images/guitar2.jpg" alt="guitar">
 		</div>
 		<div class="about-content">					
 					<h2><strong>About  MUSIGLOBE</strong></h2>
@@ -157,7 +157,7 @@ if(isset($_GET['adminid'])){
 		</div><!--/#map
 		<div class="contact-section">
 			<div class="ear-piece">
-				<img class="img-responsive" src="images/ear-piece.png" alt="">
+				<img class="img-responsive" src="../../images/ear-piece.png" alt="">
 			</div>
 			<div class="container">
 				<div class="row">
@@ -212,21 +212,21 @@ if(isset($_GET['adminid'])){
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2016 MusiGlobe. All Rights Reserved.</p>                
+                <p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>               
             </div>
         </div>
     </footer>
     <!--/#footer-->
   
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  	<script type="text/javascript" src="js/gmaps.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
-    <script type="text/javascript" src="js/jquery.parallax.js"></script>
-    <script type="text/javascript" src="js/coundown-timer.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-    <script type="text/javascript" src="js/jquery.nav.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>  
+  	<script type="text/javascript" src="../../js/gmaps.js"></script>
+	<script type="text/javascript" src="../../js/smoothscroll.js"></script>
+    <script type="text/javascript" src="../../js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="../../js/coundown-timer.js"></script>
+    <script type="text/javascript" src="../../js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="../../js/jquery.nav.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>  
 </body>
 </html>

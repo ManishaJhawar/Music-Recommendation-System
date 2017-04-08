@@ -8,10 +8,6 @@ echo "<!DOCTYPE html>
       	<meta charset='UTF-8'>
       	<title>database connections</title>
       	
-      	<script type='text/javascript' src='validateRatingForm.js'></script>
-      	<script type='text/javascript' src='validatePlaylist.js'></script>
-      	<script type='text/javascript' src='validateViewPlaylist.js'></script>
-      	
     </head>
     
     <body>";

@@ -26,13 +26,13 @@
  		$user = 'root';
  		$pass = '';
  		
- 		$con=mysqli_connect($host, $user, $pass,'WTAproject');
+ 		$con=mysqli_connect($host, $user, $pass,'Music_System');
  		if(mysqli_connect_errno())
  		{
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
 		}
 
- 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name='".$searchQuery."';";
+ 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name LIKE '%".$searchQuery."%';";
  		
  		echo "
  		<div style='overflow-x:auto;'>
