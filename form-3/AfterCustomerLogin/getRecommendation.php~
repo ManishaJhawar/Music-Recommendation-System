@@ -58,7 +58,7 @@ if(isset($_GET['regid'])){
   			mysqli_free_result($result);
 		}
 		
-		$filename="customerRatingsTriples.csv";
+		$filename="outputFinal.csv";
 		//chmod($filename, 0777);
 		
 		$file = fopen($filename,"a");
