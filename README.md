@@ -3,7 +3,7 @@ The website involves identifying the diversity in music, analyzing the individua
 Every logged in user has access to the recommender system. The system will go through the songs that user has previously listened to and rated. Based on this information, it recommends songs to the user. 
 The main aim is to provide accurate music recommendations to the user. Recommendation will be provided only after the user rates at least 3 or more songs.
 
-The collaborative filtering code has been implemented in /Music-Recommendation-System/form-3/AfterCustomerLogin/collaborative_filtering.py file.
+The collaborative filtering code has been implemented in "/Music-Recommendation-System/form-3/AfterCustomerLogin/collaborative_filtering.py" file.
 
 Website has been created by taking [this](http://www.free-css.com/free-css-templates/page203/evento) as the base template.
 
