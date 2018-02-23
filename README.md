@@ -5,6 +5,6 @@ The main aim is to provide accurate music recommendations to the user. Recommend
 
 The collaborative filtering code has been implemented in /Music-Recommendation-System/form-3/AfterCustomerLogin/collaborative_filtering.py file.
 
-Website has been created by taking this(http://www.free-css.com/free-css-templates/page203/evento) as the base template.
+Website has been created by taking [this](http://www.free-css.com/free-css-templates/page203/evento) as the base template.
 
-Collaborative filtering is done by using pearson correlation. This(http://dataaspirant.com/2015/05/25/collaborative-filtering-recommendation-engine-implementation-in-python/) blog has been reffered.
+Collaborative filtering is done by using pearson correlation. [This](http://dataaspirant.com/2015/05/25/collaborative-filtering-recommendation-engine-implementation-in-python/) blog has been reffered.
