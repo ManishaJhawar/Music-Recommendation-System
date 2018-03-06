@@ -8,3 +8,5 @@ The collaborative filtering code has been implemented in "/Music-Recommendation-
 Website has been created by taking [this](http://www.free-css.com/free-css-templates/page203/evento) as the base template.
 
 Collaborative filtering is done by using pearson correlation. [This](http://dataaspirant.com/2015/05/25/collaborative-filtering-recommendation-engine-implementation-in-python/) blog has been referred.
+
+The backend runs on MySQL provided by XAMPP. The conceptual model (E-R_diagram.png) and relational model (Schema.png) is in the "Diagrams" folder.
